@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.easygame {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background: #ffd1d1;
+  /* overflow: hidden; */
+}
+.mediumgame {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background: #d1d2f9;
+  overflow: hidden;
+}
+.hardgame {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background: #b6b6b6;
+  overflow: hidden;
+}
+.gameeasy,
+.gamemedium {
+  width: 70vw;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+.memorycard {
+  width: calc(25% - 10px);
+  height: calc (33.333% - 10px);
+  position: relative;
+  margin: 5px;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.7s;
+}
+.medium {
+  width: calc(15% - 10px);
+  height: calc (33.333% - 10px);
+  position: relative;
+  margin: 5px;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.7s;
+}
+.medium:active {
+  transform: scale(0.9);
+  transition: all 0.2s;
+}
+.hard {
+  width: calc(15% - 10px);
+  height: calc (33.333% - 10px);
+  position: relative;
+  margin: 5px;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.7s;
+}
+.hard:active {
+  transform: scale(0.9);
+  transition: all 0.2s;
+}
+.frontface,
+.backface {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  position: absolute;
+  background: #ebcbae;
+  backface-visibility: hidden;
+}
+.frontface {
+  transform: rotateY(180deg);
+}
+.flipthecard {
+  transform: rotateY(180deg);
+}
+.frontface-m,
+.backface-m {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  position: absolute;
+  background: #a3bcf9;
+  backface-visibility: hidden;
+}
+.frontface-m {
+  transform: rotateY(180deg);
+}
+.frontface-h,
+.backface-h {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  position: absolute;
+  background: #da4432;
+  backface-visibility: hidden;
+}
+.frontface-h {
+  transform: rotateY(180deg);
+}
+
+.stats {
+  padding-top: 2rem;
+  text-align: center;
+  width: 20vw;
+  justify-content: center;
+}
+.score {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+.flips {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+.restart {
+  font-size: 2rem;
+  margin-bottom: 9rem;
+}
+.back {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+.miliseconds {
+  display: none;
+}
+.stopwatch {
+  width: 10vw;
+  padding: 2.5rem;
+  font-size: 2rem;
+}
+/* Win Screen ------>0000000-------> */
+.warningcontainer {
+  display: grid;
+  background: hsla(60, 1%, 30%, 0.7);
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  /* Hide this modal until we need it */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.warning {
+  color: whitesmoke;
+  font-size: 4rem;
+  width: 50vw;
+  height: 50vh;
+  padding: 2rem;
+  border-radius: 5px;
+  background: url(https://media.giphy.com/media/QMkPpxPDYY0fu/giphy.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateY(-200%);
+  transition: transform 2s;
+  z-index: 5;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+.open .warning {
+  transform: translateY(0);
+}
+.resbtn,
+.backbtn{
+background: grey;
+color: white;
+margin: 1rem;
+font-size: 1.5rem;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory JS</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="../Minecraft Assignment Weekend/normalize.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Emblema+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    .mainmenu {
+      background: #683257;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .headline {
+      text-align: center;
+      color: #42213d;
+      font-size: 3rem;
+      font-family: "Emblema One", cursive;
+    }
+    .headline span {
+      color: #bd4089;
+    }
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    }
+    .buttons a {
+      text-decoration: none;
+      color: #f51aa4;
+      font-size: 3rem;
+      padding: 1rem;
+    }
+    .easy-btn a{
+      color: #f51aa4;
+      margin-bottom: 0.5rem;
+      transition: all 0.4s;
+    }
+    .medium-btn a{
+      color:#b61472;
+      transition: all 0.4s;
+    }
+    .hard-btn a{
+      color:#85004d;
+      transition: all 0.4s;
+    }
+    .easy-btn{
+      margin-bottom: 2rem;
+    }
+    .medium-btn{
+      margin-bottom: 2rem;
+    }
+    .hard-btn{
+      margin-bottom: 2rem;
+    }
+    .easy-btn a:hover{
+      color: fuchsia;
+      margin-bottom: 0.5rem;
+    }
+    .medium-btn a:hover{
+      color:fuchsia;
+    }
+    .hard-btn a:hover{
+      color:fuchsia;
+    }
+  </style>
+  <body>
+    <section class="mainmenu">
+      <div class="headline">
+        <h1>Test Your <span> Memory</span></h1>
+      </div>
+
+      <div class="buttons">
+        <div class="easy-btn"><a href="./easy.html">Easy</a></div>
+        <div class="medium-btn"><a href="./medium.html">Medium</a></div>
+        <div class="hard-btn"><a href="./hard.html">Hard</a></div>
+      </div>
+    </section>
+    <script src="./logic.js"></script>
+  </body>
+</html>
