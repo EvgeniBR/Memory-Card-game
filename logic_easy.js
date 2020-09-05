@@ -14,9 +14,9 @@ let secondCard;
 let waitForCards = false;
 let warningscreen = document.querySelector(`.warningcontainer`);
 let warning = document.querySelector(`.warning`);
-let watch = setInterval(runStopWatch, 10);
+setInterval(runStopWatch, 10);
 
-runStopWatch();
+// runStopWatch();
 // winScreen();
 
 function flipCard() {
@@ -28,7 +28,7 @@ function flipCard() {
     firstCard = this;
     return;
   }
-  
+
   flippedCard = false;
   secondCard = this;
 
@@ -47,7 +47,7 @@ function checkMatch() {
       winScreen();
     } else if (winCounter === 9 && mediumCards.length === 18) {
       winScreen();
-    }else if (winCounter === 12 && hardCards.length === 24) {
+    } else if (winCounter === 12 && hardCards.length === 24) {
       winScreen();
     }
   } else {
@@ -103,6 +103,12 @@ function runStopWatch() {
   if (parseInt(currentMinut.textContent) === 60) {
     currentMinut.textContent = 0;
   }
+  if(parseInt(currentSecond.textContent)<10){
+    currentSecond.textContent = '0' + parseInt(currentSecond.textContent);
+  }
+  if(parseInt(currentMinut.textContent)<10){
+    currentMinut.textContent = '0' + parseInt(currentMinut.textContent);
+  }
 }
 
 //event listeners on cards --------------------------------------------------------->
@@ -116,7 +122,7 @@ restart.addEventListener(`click`, () => {
   window.location.reload();
 });
 // win screen! --------------------------------------------------------------------->
-console.log(warningscreen);
+
 function winScreen() {
   warningscreen.classList.add(`open`);
   warning.textContent = `You WIN!`;

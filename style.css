@@ -117,6 +117,8 @@
   text-align: center;
   width: 20vw;
   justify-content: center;
+  border: 2px solid black;
+  margin: 1rem;
 }
 .score {
   font-size: 2rem;
@@ -129,10 +131,24 @@
 .restart {
   font-size: 2rem;
   margin-bottom: 9rem;
+  background:burlywood;
+  cursor: pointer;
+  transition:all 0.5s;
+  
 }
-.back {
+.restart:hover{
+  background: #da4432;
+}
+.back a{
   font-size: 2rem;
   margin-bottom: 3rem;
+  text-decoration: none;
+  color: #131313;
+  background:burlywood;
+  transition:all 0.5s;
+}
+.back a:hover{
+  background: #da4432;
 }
 .miliseconds {
   display: none;
