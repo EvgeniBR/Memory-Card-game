@@ -14,7 +14,9 @@ let secondCard;
 let waitForCards = false;
 let warningscreen = document.querySelector(`.warningcontainer`);
 let warning = document.querySelector(`.warning`);
-setInterval(runStopWatch, 10);
+const watch = setInterval(runStopWatch, 10);
+
+  
 
 // runStopWatch();
 // winScreen();
@@ -103,11 +105,11 @@ function runStopWatch() {
   if (parseInt(currentMinut.textContent) === 60) {
     currentMinut.textContent = 0;
   }
-  if(parseInt(currentSecond.textContent)<10){
-    currentSecond.textContent = '0' + parseInt(currentSecond.textContent);
+  if (parseInt(currentSecond.textContent) < 10) {
+    currentSecond.textContent = "0" + parseInt(currentSecond.textContent);
   }
-  if(parseInt(currentMinut.textContent)<10){
-    currentMinut.textContent = '0' + parseInt(currentMinut.textContent);
+  if (parseInt(currentMinut.textContent) < 10) {
+    currentMinut.textContent = "0" + parseInt(currentMinut.textContent);
   }
 }
 
