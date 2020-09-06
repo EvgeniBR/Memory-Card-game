@@ -28,6 +28,7 @@ function flipCard() {
   if (!flippedCard) {
     flippedCard = true;
     firstCard = this;
+    firstCard.removeEventListener(`click`, flipCard);
     return;
   }
 
@@ -53,6 +54,7 @@ function checkMatch() {
       winScreen();
     }
   } else {
+    firstCard.addEventListener(`click`, flipCard);
     turnBack();
     scoreCounter.textContent = parseInt(scoreCounter.textContent) - 10;
   }
