@@ -12,11 +12,11 @@ let flippedCard = false;
 let firstCard;
 let secondCard;
 let waitForCards = false;
-let watch = setInterval(runStopWatch, 10);
 let warningscreen = document.querySelector(`.warningcontainer`);
 let warning = document.querySelector(`.warning`);
+setInterval(runStopWatch, 10);
 
-runStopWatch();
+// runStopWatch();
 // winScreen();
 
 function flipCard() {
@@ -28,7 +28,7 @@ function flipCard() {
     firstCard = this;
     return;
   }
-  console.log(this);
+
   flippedCard = false;
   secondCard = this;
 
@@ -43,14 +43,11 @@ function checkMatch() {
     stopFlip();
     scoreCounter.textContent = parseInt(scoreCounter.textContent) + 30;
     winCounter += 1;
-    console.log(window.location);
-    if(winCounter === cards.length){
+    if (winCounter === 6 && cards.length === 12) {
       winScreen();
-    }
-    if(winCounter === mediumCards.length){
+    } else if (winCounter === 9 && mediumCards.length === 18) {
       winScreen();
-    }
-    if(winCounter === hardCards.length){
+    } else if (winCounter === 12 && hardCards.length === 24) {
       winScreen();
     }
   } else {
@@ -106,23 +103,24 @@ function runStopWatch() {
   if (parseInt(currentMinut.textContent) === 60) {
     currentMinut.textContent = 0;
   }
+  if(parseInt(currentSecond.textContent)<10){
+    currentSecond.textContent = '0' + parseInt(currentSecond.textContent);
+  }
+  if(parseInt(currentMinut.textContent)<10){
+    currentMinut.textContent = '0' + parseInt(currentMinut.textContent);
+  }
 }
 
 //event listeners on cards --------------------------------------------------------->
 cards.forEach((card) => card.addEventListener(`click`, flipCard));
 
-restart.addEventListener(`click`, () => {
-  window.location.reload();
- });
 mediumCards.forEach((card) => card.addEventListener(`click`, flipCard));
-restart.addEventListener(`click`, () => {
-  window.location.reload();
-});
-hardCards.forEach((card) => card.addEventListener(`click`, flipCard));
-restart.addEventListener(`click`, () => {
-  window.location.reload();
-});
 
+hardCards.forEach((card) => card.addEventListener(`click`, flipCard));
+
+restart.addEventListener(`click`, () => {
+  window.location.reload();
+});
 // win screen! --------------------------------------------------------------------->
 
 function winScreen() {
@@ -142,6 +140,6 @@ function winScreen() {
   });
 
   backBtn.addEventListener(`click`, () => {
-    document.location.href = "./index.html";
+    document.location.href = "https://fervent-goodall-a0eb43.netlify.app/";
   });
 }
