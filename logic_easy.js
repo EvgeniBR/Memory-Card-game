@@ -9,12 +9,14 @@ let currentMinut = document.querySelector(`.minuts`);
 let currentSecond = document.querySelector(`.seconds`);
 let currentMilisecond = document.querySelector(`.miliseconds`);
 let flippedCard = false;
-let firstCard;
+let firstCard
 let secondCard;
 let waitForCards = false;
 let warningscreen = document.querySelector(`.warningcontainer`);
 let warning = document.querySelector(`.warning`);
-setInterval(runStopWatch, 10);
+const watch = setInterval(runStopWatch, 10);
+
+  
 
 // runStopWatch();
 // winScreen();
@@ -26,6 +28,7 @@ function flipCard() {
   if (!flippedCard) {
     flippedCard = true;
     firstCard = this;
+    firstCard.removeEventListener(`click`, flipCard);
     return;
   }
 
@@ -51,6 +54,7 @@ function checkMatch() {
       winScreen();
     }
   } else {
+    firstCard.addEventListener(`click`, flipCard);
     turnBack();
     scoreCounter.textContent = parseInt(scoreCounter.textContent) - 10;
   }
@@ -103,11 +107,11 @@ function runStopWatch() {
   if (parseInt(currentMinut.textContent) === 60) {
     currentMinut.textContent = 0;
   }
-  if(parseInt(currentSecond.textContent)<10){
-    currentSecond.textContent = '0' + parseInt(currentSecond.textContent);
+  if (parseInt(currentSecond.textContent) < 10) {
+    currentSecond.textContent = "0" + parseInt(currentSecond.textContent);
   }
-  if(parseInt(currentMinut.textContent)<10){
-    currentMinut.textContent = '0' + parseInt(currentMinut.textContent);
+  if (parseInt(currentMinut.textContent) < 10) {
+    currentMinut.textContent = "0" + parseInt(currentMinut.textContent);
   }
 }
 
