@@ -9,7 +9,7 @@ let currentMinut = document.querySelector(`.minuts`);
 let currentSecond = document.querySelector(`.seconds`);
 let currentMilisecond = document.querySelector(`.miliseconds`);
 let flippedCard = false;
-let firstCard
+let firstCard;
 let secondCard;
 let waitForCards = false;
 let warningscreen = document.querySelector(`.warningcontainer`);
