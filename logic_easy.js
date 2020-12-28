@@ -8,7 +8,11 @@ let winCounter = 0;
 let currentMinut = document.querySelector(`.minuts`);
 let currentSecond = document.querySelector(`.seconds`);
 let currentMilisecond = document.querySelector(`.miliseconds`);
+<<<<<<< HEAD
 let flippedCard = false
+=======
+let flippedCard = false;
+>>>>>>> d9aab4ac8e076717a3323fd19b80d413743232fb
 let firstCard;
 let secondCard;
 let waitForCards = false;
