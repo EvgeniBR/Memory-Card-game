@@ -8,9 +8,19 @@ let winCounter = 0;
 let currentMinut = document.querySelector(`.minuts`);
 let currentSecond = document.querySelector(`.seconds`);
 let currentMilisecond = document.querySelector(`.miliseconds`);
+<<<<<<< HEAD
 let flippedCard = false
 let firstCard
 let secondCard
+=======
+<<<<<<< HEAD
+let flippedCard = false
+=======
+let flippedCard = false;
+>>>>>>> d9aab4ac8e076717a3323fd19b80d413743232fb
+let firstCard;
+let secondCard;
+>>>>>>> 7c4e11e2594a6886a9adbe52fc41b46642c7e803
 let waitForCards = false;
 let warningscreen = document.querySelector(`.warningcontainer`);
 let warning = document.querySelector(`.warning`);
