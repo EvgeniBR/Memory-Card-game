@@ -5,4 +5,4 @@
 
 <br/>
 
-## chose the dificulty and start the game it's that simple!!!!!!!!!!!!!!!!
+## chose the dificulty and start the game it's that simple!!!!!!!!!!!!!!!
