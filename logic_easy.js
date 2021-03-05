@@ -11,14 +11,14 @@ let currentMilisecond = document.querySelector(`.miliseconds`);
 
 let flippedCard = false;
 
-let flippedCard = false;
+// let flippedCard = false;
 
 let firstCard;
 let secondCard;
-let flippedCard = false
-let flippedCard = false;
-let firstCard;
-let secondCard;
+// let flippedCard = false
+// let flippedCard = false;
+// let firstCard;
+// let secondCard;
 let waitForCards = false;
 let warningscreen = document.querySelector(`.warningcontainer`);
 let warning = document.querySelector(`.warning`);
